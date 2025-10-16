@@ -29,10 +29,9 @@ Unlike vanilla T5, which treats text sequentially, this model performs **graph-b
 ---
 
 ## 📁 Project Structure
-├── data/
-│ ├── hotpot_hypergraphs_new5k.json # Preprocessed dataset with hypergraph nodes
-│ └── final.pt # Trained model checkpoint
-│
+
+
+
 ├── models/
 │ └── hypergraph_qg_model.py # Combines Hypergraph Encoder and T5
 │
@@ -45,6 +44,7 @@ Unlike vanilla T5, which treats text sequentially, this model performs **graph-b
 ├── requirements.txt # Dependencies list
 ├── Dockerfile # Docker setup file
 └── README.md # You are here 🙂
+
 
 
 ---
