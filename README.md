@@ -29,4 +29,47 @@ Unlike vanilla T5, which treats text sequentially, this model performs **graph-b
 ---
 
 ## 📁 Project Structure
+├── data/
+│ ├── hotpot_hypergraphs_new5k.json # Preprocessed dataset with hypergraph nodes
+│ └── final.pt # Trained model checkpoint
+│
+├── models/
+│ └── hypergraph_qg_model.py # Combines Hypergraph Encoder and T5
+│
+├── modules/
+│ ├── hypergraph_encoder.py # Stacked Hypergraph Transformer layers
+│ └── hypergraph_transformer_layer.py # Implements hyperedge attention
+│
+├── train.py # Model training script
+├── evaluate.py # Evaluation and question generation
+├── requirements.txt # Dependencies list
+├── Dockerfile # Docker setup file
+└── README.md # You are here 🙂
+
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/<your-username>/Hypergraph-T5-QG.git
+cd Hypergraph-T5-QG
+
+
+2️⃣ Install dependencies
+pip install -r requirements.txt
+
+3️⃣ (Optional) Build Docker image
+docker build -t hypergraph-qg .
+
+🧪 Usage
+▶️ Train the model
+python train.py
+
+🧠 Evaluate / Generate Questions
+python evaluate.py
+
+🐳 Run via Docker
+docker run -it hypergraph-qg
 
